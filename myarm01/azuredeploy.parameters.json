@@ -1,0 +1,32 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "virtualNetworkName": {
+            "value": "CrmVnet"
+        },
+        "networkInterfaceName": {
+            "value": "CrmNic"
+        },
+        "loadBalancerName": {
+            "value": "CrmLb"
+        },
+        "adminUsername": {
+            "value": "adguy"
+        },
+        "vmName": {
+            "value": "CrmVm"
+        },
+        "storageAccountName": {
+            "value": "crmstorage2"
+        },
+      "adminPassword": {
+        "reference": {
+          "keyVault": {
+            "id": "/subscriptions/91bffbd0-7a38-498e-b512-9b5af8e9f479/resourceGroups/ukdemorg/providers/Microsoft.KeyVault/vaults/shumvoldy"
+          },
+          "secretName": "panda151"
+        }
+      }
+    }
+}
